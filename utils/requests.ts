@@ -1,4 +1,5 @@
 const TMDB_API_KEY = '93fd2f41c8c7e5813520fcc9097cd0bd'
+import TmdbMovie from '../types/TmdbMovie'
 
 type RequestType = {
   title: string
@@ -7,26 +8,9 @@ type RequestType = {
 
 export type Page = {
   page?: number
-  results: Movie[]
+  results: TmdbMovie[]
   total_pages?: number
   total_results?: number
-}
-
-export type Movie = {
-  poster_path?: string | null
-  adult?: boolean
-  overview?: string
-  release_date?: string
-  genre_ids?: [number]
-  id?: number
-  original_title?: string
-  original_language?: string
-  title?: string
-  backdrop_path?: string | null
-  popularity?: number
-  vote_count?: number
-  video?: boolean
-  vote_average?: number
 }
 
 const requests: Record<string, RequestType> = {

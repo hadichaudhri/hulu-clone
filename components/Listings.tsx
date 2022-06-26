@@ -1,10 +1,10 @@
-import { Movie, Page } from '../utils/requests'
+import Movie from '../types/Movie'
 import ListingItem from './ListingItem'
 
-const Listings = ({ listings }: { listings: Page }): JSX.Element => {
+const Listings = ({ listings }: { listings: Movie[] }): JSX.Element => {
   return (
-    <ul>
-      {listings.results.map((listing: Movie) => (
+    <ul className="flex-wrap justify-evenly">
+      {listings.map((listing: Movie) => (
         <li key={listing.id}>
           <ListingItem {...listing} />
         </li>

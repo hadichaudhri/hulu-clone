@@ -3,9 +3,11 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Listings from '../components/Listings'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
-import requests, { Page } from '../utils/requests'
+import requests from '../utils/requests'
+import TmdbMovie from '../types/TmdbMovie'
+import Movie, { validateMovie } from '../types/Movie'
 
-export const Home = (results: Page): JSX.Element => (
+export const Home = ({ results }: { results: Movie[] }): JSX.Element => (
   <div className="container">
     <Head>
       <title>Hulu Clone</title>
@@ -18,14 +20,14 @@ export const Home = (results: Page): JSX.Element => (
 )
 
 interface Props {
-  results: string
+  results: Movie[]
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (
   context: GetServerSidePropsContext
 ) => {
   const genre = context.query.genre?.toString() ?? 'fetchTrending'
-  const results = await fetch(
+  const results: Movie[] = await fetch(
     `https://api.themoviedb.org/3${requests[genre].url}`
   )
     .then((res) => {
@@ -35,7 +37,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
       return res.json()
     })
     .then((res) => res.results)
-
+    .then((res) => res.map((tmdbMovie: TmdbMovie) => validateMovie(tmdbMovie)))
   return {
     props: {
       results: results,
