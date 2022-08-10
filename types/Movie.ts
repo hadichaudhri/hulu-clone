@@ -9,12 +9,14 @@ const getImagePath = (listing: TmdbMovie): string => {
   if (listing.poster_path) {
     return `${BASE_TMDB_IMAGE_PATH}${listing.poster_path}`
   }
-  return '/public/movie_placeholder.png'
+
+  return '/movie_placeholder.png'
 }
 
 type Movie = {
   id: number
-  image_path: string
+  poster_path: string
+  backdrop_path: string
   overview: string
   title: string
 }
@@ -24,7 +26,11 @@ export const validateMovie = (movie: TmdbMovie): Movie => {
     id: movie.id,
     title: movie.title ?? 'No Title Found',
     overview: movie.overview ?? 'No Information Found',
-    image_path: getImagePath(movie),
+    poster_path:
+      `${BASE_TMDB_IMAGE_PATH}${movie.poster_path}` ?? '/movie_placeholder.png',
+    backdrop_path:
+      `${BASE_TMDB_IMAGE_PATH}${movie.backdrop_path}` ??
+      '/movie_placeholder.png',
   }
 }
 

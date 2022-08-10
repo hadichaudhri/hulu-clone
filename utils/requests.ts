@@ -46,10 +46,10 @@ const requests: Record<string, RequestType> = {
     title: 'Animation',
     url: `/discover/movie?api_key=${TMDB_API_KEY}&with_genres=16`,
   },
-  fetchTVMovies: {
-    title: 'TV Movies',
-    url: `/discover/movie?api_key=${TMDB_API_KEY}&with_genres=10770`,
-  },
+  // fetchTVMovies: {
+  //   title: 'TV Movies',
+  //   url: `/discover/movie?api_key=${TMDB_API_KEY}&with_genres=10770`,
+  // },
 }
 
 export default requests
