@@ -4,15 +4,16 @@ import Image from 'next/image'
 const ListingItem = (listing: Movie): JSX.Element => {
   return (
     <>
-      <div className="relative h-80 w-800">
+      <div className="relative mb-2 h-40 transition-transform delay-300 duration-500 hover:z-10 hover:scale-[1.04]">
         <Image
-          alt="hi"
-          src={listing.image_path}
-          objectFit="contain"
+          className="cursor-pointer rounded-xl bg-turquoise-400"
+          alt={`${listing.title} Poster`}
+          src={listing.backdrop_path}
+          objectFit="cover"
           layout="fill"
         />
       </div>
-      {listing.title}
+      <span className="line-clamp-1">{listing.title}</span>
     </>
   )
 }
