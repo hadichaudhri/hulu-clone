@@ -15,6 +15,7 @@ export const Home = ({ results }: { results: Movie[] }): JSX.Element => (
     </Head>
     <Header />
     <Nav />
+    <div className="mx-5 my-2 border-b-4 border-turquoise-400"></div>
     <Listings listings={results} />
   </div>
 )

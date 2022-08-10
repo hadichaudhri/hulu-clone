@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-gray-300 bg-bgcolor;
+    @apply text-gray-300 bg-turquoise-700;
     -webkit-tap-highlight-color: transparent;
   }
 }
