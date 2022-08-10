@@ -7,9 +7,9 @@ type Props = {
 
 const HeaderItem: React.FC<Props> = ({ name, Icon }) => {
   return (
-    <div className="flex flex-col items-center w-8 cursor-pointer group">
+    <div className="group flex w-8 cursor-pointer flex-col items-center hover:font-bold hover:text-gray-200">
       <Icon />
-      <p className="text-sm transition ease-in-out opacity-0 duration-250 group-hover:opacity-100">
+      <p className="duration-250 text-sm opacity-0 transition ease-in-out group-hover:opacity-100">
         {name}
       </p>
     </div>

@@ -12,7 +12,7 @@ import HeaderItem from './HeaderItem'
 
 const Header = (): JSX.Element => {
   return (
-    <header className="flex flex-col justify-around p-8 pb-0 sm:justify-between sm:items-end sm:flex-row">
+    <header className="flex flex-col justify-around p-8 pb-0 sm:flex-row sm:items-end sm:justify-between">
       <div className="flex flex-row justify-around">
         <HeaderItem name="HOME" Icon={HomeIcon} />
         <HeaderItem name="TRENDING" Icon={LightningBoltIcon} />
@@ -23,6 +23,7 @@ const Header = (): JSX.Element => {
       </div>
       <Image
         className="object-contain m-0"
+        alt="Hulu Logo"
         src={'https://press.hulu.com/wp-content/uploads/2020/02/hulu-white.png'}
         width={200}
         height={75}
