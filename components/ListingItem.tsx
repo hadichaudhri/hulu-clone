@@ -4,7 +4,7 @@ import Image from 'next/image'
 const ListingItem = (listing: Movie): JSX.Element => {
   return (
     <>
-      <div className="relative mb-2 h-40 transition-transform delay-300 duration-500 hover:z-10 hover:scale-[1.04]">
+      <div className="relative mb-2 h-40 transition-transform delay-150 duration-200 hover:z-10 hover:scale-[1.04]">
         <Image
           className="cursor-pointer rounded-xl bg-turquoise-400"
           alt={`${listing.title} Poster`}
