@@ -1,10 +1,12 @@
 const TMDB_API_KEY = '93fd2f41c8c7e5813520fcc9097cd0bd'
 import TmdbMovie from '../types/TmdbMovie'
 
-type RequestType = {
+type GenreDetails = {
   title: string
   url: string
 }
+
+type Genre = string
 
 export type Page = {
   page?: number
@@ -13,7 +15,7 @@ export type Page = {
   total_results?: number
 }
 
-const requests: Record<string, RequestType> = {
+const genres: Record<Genre, GenreDetails> = {
   fetchTrending: {
     title: 'Trending',
     url: `/trending/movie/week?api_key=${TMDB_API_KEY}&language=en-US`,
@@ -52,4 +54,4 @@ const requests: Record<string, RequestType> = {
   // },
 }
 
-export default requests
+export default genres
