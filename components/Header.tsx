@@ -22,7 +22,7 @@ const Header = (): JSX.Element => {
         <HeaderItem name="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
-        className="object-contain m-0"
+        className="m-0 object-contain"
         alt="Hulu Logo"
         src={'https://press.hulu.com/wp-content/uploads/2020/02/hulu-white.png'}
         width={200}
