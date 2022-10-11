@@ -5,7 +5,8 @@ import Listings from '../components/Listings'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import genres from '../utils/requests'
 import TmdbMovie from '../types/TmdbMovie'
-import Movie, { validateMovie } from '../types/Movie'
+import Movie from '../types/Movie'
+import validateMovie from '../utils/validateMovie'
 
 export const Home = ({ results }: { results: Movie[] }): JSX.Element => (
   <>
