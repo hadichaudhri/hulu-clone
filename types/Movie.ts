@@ -2,17 +2,6 @@ import TmdbMovie from './TmdbMovie'
 
 const BASE_TMDB_IMAGE_PATH = 'https://images.tmdb.org/t/p/w500'
 
-const getImagePath = (listing: TmdbMovie): string => {
-  if (listing.backdrop_path) {
-    return `${BASE_TMDB_IMAGE_PATH}${listing.backdrop_path}`
-  }
-  if (listing.poster_path) {
-    return `${BASE_TMDB_IMAGE_PATH}${listing.poster_path}`
-  }
-
-  return '/movie_placeholder.png'
-}
-
 type Movie = {
   id: number
   poster_path: string
