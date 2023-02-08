@@ -1,33 +1,41 @@
-# NextJS Typescript Boilerplate
+# Hulu Clone
 
-Bootstrap a developer-friendly NextJS app configured with:
+A movie web application built using Next.js and Tailwind CSS and the TMDB API, integrated with lazy loading, SEO and routing features that come in-built with Next.js, and deployed on Vercel
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+## Demo
 
-## Preview
+Check it out [here](https://hulu-clone-mu-six.vercel.app/)!
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+![App Screenshot](./public/site_screenshot.png)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+## Run Locally
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest&project-name=with-typescript-eslint-jest&repository-name=with-typescript-eslint-jest)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Clone the project
 
 ```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
+  git clone https://github.com/hadichaudhri/hulu-clone
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Go to the project directory
+
+```bash
+  cd hulu-clone
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server in dev mode
+
+```bash
+  npm run dev
+```
+
+## Tech Stack
+
+**Client:** React, TailwindCSS
+
+**Server:** Node, NextJS
